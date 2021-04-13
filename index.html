@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="stylesheet.css">
+    <title>Sorting Visualiser</title>
+    <link rel="shortcut icon"
+        type="image/png"
+        href="favicon.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <a class="navbar-brand mycolor">Sorting Visualiser</a>
+        <button class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navLinks">
+            <span class="navbar-toggler-icon"
+                aria-label="navigation toggle"></span>
+        </button>
+        <div id="navLinks"
+            class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><button id="genarr"
+                        class="nav-link btn btn-outline-light m-1 p-1">New Array</button></li>
+                <li class="nav-item "><button id="qsort"
+                        class="nav-link btn btn-outline-light m-1 p-1">QuickSort</button></li>
+                <li class="nav-item"><button id="bsort"
+                        class="nav-link btn btn-outline-light m-1 p-1">BubbleSort</button></li>
+                <li class="nav-item"><button id="isort"
+                        class="nav-link btn btn-outline-light m-1 p-1">InsertionSort</button></li>
+                <li class="nav-item"><button id="Ssort"
+                        class="nav-link btn btn-outline-light m-1 p-1">SelectionSort</button></li>
+                <li class="nav-item">
+                    <a href="http://www.linkedin.com/in/piyushterkar"
+                        class="nav-link btn btn-outline-light m-1 p-1">About me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <form class=" px-3 py-2">
+        <div class="double-border">
+            <p>Use the buttons on the navigation bar to sort the array below!</p>
+            <label for="size">Input size and Sorting Speed</label>
+            <input id="size"
+                type="range"
+                min="20"
+                max="100">
+        </div>
+    </form>
+    <div id="bar-container">
+    </div>
+    <div id="qf"
+        class="flashcard hide">
+        <h2>QuickSort</h2>
+        <p>Time complexity:
+            Best: O(nlog(n)) | Average: O(nlog(n)) | Worst: O(n<sup>2</sup>)
+        </p>
+        <p>Space complexity: O(log(n))</p>
+    </div>
+    <div id="bf"
+        class="flashcard hide">
+        <h2>Bubble Sort</h2>
+        <p>Time complexity:
+            Best: O(n) | Average: O(n<sup>2</sup>) | Worst: O(n<sup>2</sup>)
+        </p>
+        <p>Space complexity: O(1)</p>
+    </div>
+    <div id="if"
+        class="flashcard hide">
+        <h2>Insertion Sort</h2>
+        <p>Time complexity:
+            Best: O(n) | Average: O(n<sup>2</sup>) | Worst: O(n<sup>2</sup>)
+        </p>
+        <p>Space complexity: O(1)</p>
+    </div>
+    <div id="sf"
+        class="flashcard hide">
+        <h2>Selection Sort</h2>
+        <p>Time complexity:
+            Best: O(n<sup>2</sup>) | Average: O(n<sup>2</sup>) | Worst: O(n<sup>2</sup>)
+        </p>
+        <p>Space complexity: O(1)</p>
+    </div>
+    <main>
+        <h1 class="red">Welcome to Sorting visualiser!</h1>
+        <hr class="red">
+        <h2 class="red">How to select a sorting algorithm?</h2>
+        <p class="text">The Programmer must be aware of several interrelated and often conflicting efficiency
+            considerations to make
+            an intelligent choice about:<br> which sorting algorithm is the most appropriate to a particular problem.
+        </p>
+        <h2 class="red">What factors must be taken into consideration?</h2>
+        <ul class="text">
+            <li>The amount of machine time necessary for running the program.</li>
+            <li>The amount of space necessary for the program.</li>
+            <li>The length of time that must be spent by the programmer in coding the sort.</li>
+        </ul>
+        <h2 class="red">Choice of a competant programmer:</h2>
+        <p class="text">If a file is small, sophisticated sorting techniques designed to minimise the space and time are
+            usually
+            worse or only marginally better in efficiencies than simpler, generally less-efficient methods.</p>
+        <p class="text">In many programming applications it is often necessary to sacrifice efficiency for clarity, with
+            sorting this
+            is usually opposite. Once, sorting program is written and tested, the programmer's chief goal must be to
+            improve speed even if it becomes less readable.</p>
+        <h3 class="red">Sounds good but how?</h3>
+        <ul class="text">
+            <li>To optimise any one: Time complexity or space complexity.</li>
+            <li>A good idea is to remove fuction calls specially from the innner loops and replace with inline code.
+            </li>
+        </ul>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
