@@ -78,3 +78,21 @@ main{
       transform: translateX(0);
     }
   }
+  @media(max-width: 640px){
+      .double-border{
+          padding: 10%;
+          border: 2px solid #e63946;
+      }
+      #bar-container{
+          padding: 7%;
+      }
+      .flashcard{
+          padding: 10%;
+      }
+      .bar{
+          width: 20%;
+      }
+      main{
+          padding: 10%;
+      }
+  }
