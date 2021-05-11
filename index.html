@@ -29,18 +29,30 @@
                 aria-label="navigation toggle"></span>
         </button>
         <div id="navLinks"
-            class="collapse navbar-collapse">
+            class="collapse navbar-collapse show">
             <ul class="navbar-nav">
                 <li class="nav-item"><button id="genarr"
                         class="nav-link btn btn-outline-light m-1 p-1">New Array</button></li>
+                <li class="nav-item"><button id="Msort"
+                        class="nav-link btn btn-outline-light m-1 p-1"
+                        data-toggle="collapse"
+                        data-target="#navLinks">Merge Sort</button></li>
                 <li class="nav-item "><button id="qsort"
-                        class="nav-link btn btn-outline-light m-1 p-1">QuickSort</button></li>
+                        class="nav-link btn btn-outline-light m-1 p-1"
+                        data-toggle="collapse"
+                        data-target="#navLinks">QuickSort</button></li>
                 <li class="nav-item"><button id="bsort"
-                        class="nav-link btn btn-outline-light m-1 p-1">BubbleSort</button></li>
+                        class="nav-link btn btn-outline-light m-1 p-1"
+                        data-toggle="collapse"
+                        data-target="#navLinks">BubbleSort</button></li>
                 <li class="nav-item"><button id="isort"
-                        class="nav-link btn btn-outline-light m-1 p-1">InsertionSort</button></li>
+                        class="nav-link btn btn-outline-light m-1 p-1"
+                        data-toggle="collapse"
+                        data-target="#navLinks">InsertionSort</button></li>
                 <li class="nav-item"><button id="Ssort"
-                        class="nav-link btn btn-outline-light m-1 p-1">SelectionSort</button></li>
+                        class="nav-link btn btn-outline-light m-1 p-1"
+                        data-toggle="collapse"
+                        data-target="#navLinks">SelectionSort</button></li>
                 <li class="nav-item">
                     <a href="http://www.linkedin.com/in/piyushterkar"
                         class="nav-link btn btn-outline-light m-1 p-1">About me</a>
@@ -52,7 +64,8 @@
         <div class="double-border">
             <p>Use the buttons on the navigation bar to sort the array below!</p>
             <label for="size">Input size and Sorting Speed</label>
-            <input id="size" class="form-range"
+            <input id="size"
+                class="form-range"
                 type="range"
                 min="20"
                 max="100">
@@ -67,6 +80,14 @@
             Best: O(nlog(n)) | Average: O(nlog(n)) | Worst: O(n<sup>2</sup>)
         </p>
         <p>Space complexity: O(log(n))</p>
+    </div>
+    <div id="mf"
+        class="flashcard hide">
+        <h2>MergeSort</h2>
+        <p>Time complexity:
+            Best: O(nlog(n)) | Average: O(nlog(n)) | Worst: O(nlog(n))
+        </p>
+        <p>Space complexity: O(n)</p>
     </div>
     <div id="bf"
         class="flashcard hide">
